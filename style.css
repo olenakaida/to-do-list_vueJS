@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Courgette", cursive;
+}
+
+.wrapper {
+  background-image: url(img/wooden.jpg);
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  position: relative;
+}
+.wrapper__block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  min-height: 80%;
+  background-color: rgba(225, 228, 225);
+
+  border-radius: 10px;
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  /* clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%); */
+}
+.wrapper__header {
+  font-size: 4rem;
+  text-align: center;
+}
+li {
+  list-style-type: none;
+  padding: 10px;
+  width: 400px;
+  display: block;
+}
+.input-box {
+  text-align: center;
+}
+.btn {
+  background-color: rgb(236, 238, 206);
+  width: 10%;
+  height: 2rem;
+  font-size: 16px;
+  padding: 5px;
+  margin: 6px;
+  border-style: none;
+  border-radius: 3px;
+  border-style: none;
+  border: solid black 1px;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
+}
+.btn:active,
+.btn-link {
+  transform: translateY(0.3rem);
+  background-color: rgba(102, 236, 25, 0.624);
+}
+.btn-delete {
+  float: right;
+  border: none;
+}
+.btn-delete:active,
+.btn-delete:link {
+  background-color: rgba(247, 20, 20, 0.707);
+}
+.btn-check {
+  border: 1px solid rgb(153, 138, 138);
+  box-shadow: 0 0.3rem 0.5rem rgba(212, 195, 195, 0.6);
+  border-radius: 50%;
+  background-color: transparent;
+  color: green;
+}
+
+.btn-check:visited,
+.btn-check:active {
+  background-color: rgba(219, 138, 138, 0.707);
+  transform: skew(1.2);
+  border-style: none;
+  border-radius: none;
+  border-style: none;
+  border: none;
+}
+.input {
+  width: 60%;
+  height: 2rem;
+  padding: 10px;
+  border-radius: 3px;
+  border-style: none;
+  border: solid black 1px;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.6);
+  margin: 6px;
+}
+.text-box:nth-child(2n) {
+  background-color: rgba(244, 245, 234, 0.624);
+}
+.text-box {
+  display: flex;
+  flex-direction: row;
+}
+.crossed {
+  text-decoration: line-through;
+}
+.btn-clear {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  padding: 10px;
+  background-color: #492819;
+  border-radius: 5px;
+  color: white;
+}

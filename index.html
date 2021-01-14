@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="app" class="wrapper__block">
+        <header><h1 class="wrapper__header">To Do List</h1></header>
+        <hr />
+        <div class="input-box">
+          <input
+            type="text"
+            class="input"
+            placeholder="Add a new task"
+            id="newItem"
+            v-model="enteredValue"
+          />
+          <button class="btn" @click="addItem">
+            <i class="fas fa-feather"></i>
+          </button>
+        </div>
+        <ul>
+          <div class="text-box" v-for="newItem in items">
+            <button class="btn btn-check btn-checked" @click="cross">
+              <i class="fas fa-check"></i>
+            </button>
+            <li v-bind:class="{crossed:isActive}">{{newItem}}</li>
+            <button class="btn btn-delete" @click="remove">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </ul>
+        <button class="btn-clear" @click="clearAll">Clear All</button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js.js"></script>
+  </body>
+</html>
